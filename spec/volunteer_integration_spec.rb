@@ -6,7 +6,7 @@ require('spec_helper')
 Capybara.app = Sinatra::Application
 set(:show_exceptions, false)
 
-# DB = PG.connect({ dbname: 'record_store_test', host: 'db', user: 'postgres', password: 'password' })
+DB = PG.connect({:dbname => 'volunteer_tracker_test', host: 'db', user: 'postgres', password: 'password' })
 
 # Your project should be set up so that a volunteer can only be created if a project already exists. (This makes it easier to assign the one to many relationship in Sinatra.) Focus on getting one integration spec passing at a time.
 
